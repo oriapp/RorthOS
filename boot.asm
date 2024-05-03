@@ -1,6 +1,6 @@
 ; ==============================
 ;     ~Wellcome~
-;     PotongOS | v 0.0.3
+;     RorthOS | v 0.0.3
 ;
 ; Implemented:
 ; - Print subroutine
@@ -107,7 +107,7 @@ print_char:
     int 0x10
     ret
 
-message: db 13, 10, 'Hello PotongOS!', 13, 10, 'v 0.0.3', 13, 10, 0
+message: db 13, 10, 'Hello RorthOS!', 13, 10, 'v 0.0.3', 13, 10, 0
 
 error_message: db 'Failed to load sector', 0
 
