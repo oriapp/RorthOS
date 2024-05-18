@@ -12,13 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v2
 
-    - name: Install dependencies
+    - name: Install NASM
+      run: sudo apt-get install nasm
+
+    - name: Build
       run: make
 
-    # - name: Run check
-    #   run: make check
+    - name: Test
+      run: ./rorth.out
 
-    # - name: Run distcheck
-    #   run: make distcheck
+    - name: Clean up
+      run: make c
